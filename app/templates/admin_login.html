@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Admin Login</h2>
+    <form method="post">
+        <input type="password" name="password" placeholder="Enter admin password" required>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

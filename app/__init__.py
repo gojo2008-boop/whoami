@@ -4,6 +4,9 @@ from app.database import init_db  # Import init_db to initialize the databases
 def create_app():
     app = Flask(__name__)
 
+    app.secret_key = 'superSecretSessionKeyChangeThis'  # Add this line
+
+
     # Set up configurations
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'  # Main database for users
     app.config['SQLALCHEMY_BINDS'] = {

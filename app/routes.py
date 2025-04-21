@@ -67,6 +67,30 @@ def thank_you():
     return render_template('thank_you.html')  # Redirect to the thank-you page after registration
 
 
+from flask import session
+
+@main.route('/admin-login', methods=['GET', 'POST'])
+def admin_login():
+    if request.method == 'POST':
+        password = request.form.get('password')
+        if password == 'Satoru_Gojo1006':  # Change this to something legit
+            session['admin_authenticated'] = True
+            return redirect(url_for('main.admin_dashboard'))
+        else:
+            return 'Wrong password', 401
+    return render_template('admin_login.html')
+
+
+@main.route('/admin')
+def admin_dashboard():
+    if not session.get('admin_authenticated'):
+        return redirect(url_for('main.admin_login'))
+
+    users = User.query.all()
+    return render_template('admin.html', users=users)
+
+
+
 
 
 
