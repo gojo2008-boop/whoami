@@ -1,2 +1,3 @@
-web: gunicorn app.init:create_app
+web: gunicorn run:app
+
 
