@@ -209,6 +209,78 @@ a:focus {
   outline: none;
 }
 
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  #content {
+    top: auto;
+    transform: none;
+    left: 0;
+    padding: 40px 20px;
+    position: relative;
+    text-align: center;
+  }
+
+  #content h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  #content h2,
+  #content h3,
+  #content h4 {
+    font-size: 1.8rem;
+  }
+
+  #content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+  }
+
+  #content a,
+  #content .link-item {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+    margin: 8px 10px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  form input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  form button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+  #visuals {
+    display: none; /* Optional, disable trippy visuals on mobile if it's laggy or distracting */
+  }
+}
+
+/* Large Screens (Desktop) */
+@media screen and (min-width: 1200px) {
+  #content h1 {
+    font-size: 7rem;
+  }
+
+  #content h2,
+  #content h3,
+  #content h4 {
+    font-size: 2rem;
+  }
+
+  #content p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+  }
+}
+
 
 
 

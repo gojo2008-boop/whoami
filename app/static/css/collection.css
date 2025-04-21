@@ -22,6 +22,7 @@ html {
   width: 100%;
   height: 100%;
   z-index: -1;
+  pointer-events: none; /* Ensures visuals do not interfere with interactions */
 }
 
 /* Container for the main content */
@@ -131,6 +132,85 @@ h3 {
     opacity: 1;
   }
 }
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  #content {
+    padding: 40px 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .collection-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tighter grid for smaller screens */
+    gap: 20px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .product-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large Screens (Desktop) */
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .collection-container h1 {
+    font-size: 3.5rem;
+  }
+
+  .grid {
+    gap: 40px;
+  }
+
+  .product-card {
+    padding: 30px;
+  }
+
+  .product-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .product-card p {
+    font-size: 1.2rem;
+  }
+}
+
 
 
 
