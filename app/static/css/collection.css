@@ -7,6 +7,10 @@ body {
   color: white;
   height: 100%;
   overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 html {
@@ -30,10 +34,13 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 80px 20px;
   z-index: 1;
   position: relative;
   text-align: center;
+  width: 100%;
+  max-width: 1200px;
 }
 
 /* Heading Styles (Lora font, centered) */
@@ -67,6 +74,7 @@ h3 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center; /* Center the collection header */
 }
 
 .collection-container h1 {
@@ -83,6 +91,7 @@ h3 {
   margin: 0 auto;
   width: 100%;
   padding-bottom: 20px; /* Prevents items from sticking to the bottom */
+  justify-content: center; /* Centers the grid within its container */
 }
 
 /* Product Card Styles */
