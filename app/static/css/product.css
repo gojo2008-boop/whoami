@@ -1,0 +1,105 @@
+/* Layout Reset and Full-Height Structure */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  overflow-x: hidden; /* Avoid horizontal scrolling */
+}
+
+/* LSD Background Canvas */
+#visuals {
+  position: fixed; /* fixed keeps it locked behind everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Main container for product info */
+.product-detail-container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+/* Responsive Image Styling */
+.product-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 20px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Product info block */
+.product-info {
+  margin-top: 20px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+/* Title styling */
+.product-info h1 {
+  font-family: 'Lora', serif;
+  font-size: 2.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+}
+
+/* Description – now italic + Lora */
+.product-description {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Price pop */
+.product-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 10px;
+}
+
+/* Back link styling */
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 71, 87, 0.1);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  color: #ff4757;
+  border-color: #ff4757;
+  background-color: rgba(255, 71, 87, 0.2);
+}
+
+.back-link:active {
+  transform: scale(0.98);
+}
+
+

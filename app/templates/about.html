@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+  <!-- LSD Visuals -->
+  <canvas id="visuals"></canvas>
+
+  <!-- Main Content -->
+  <div id="content" class="fade-in">
+    <h1 class="fade-in">About WHOAMI</h1>
+    <p class="fade-in">At WHOAMI, we believe in the power of self-reflection and personal transformation. Our brand isn’t just about clothing—it’s a movement. Each piece is designed to inspire introspection, creativity, and individuality. With our minimalist, bold designs and thought-provoking concepts, we aim to create a space where self-expression and authenticity collide. Join us on a journey of self-discovery and transformation. Hate, but love more.</p>
+    <a href="{{ url_for('main.home') }}" class="fade-in">Back to Home</a>
+  </div>
+
+  <!-- Link to the home.js file -->
+  <script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ product.name }} - Product Details</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/product.css') }}">
+</head>
+
+<body>
+
+  <!-- Product Details Section -->
+  <div class="product-detail-container">
+
+    <!-- Product Image -->
+    <img src="{{ url_for('static', filename='images/' + product.image_filename) }}" alt="{{ product.name }}"
+      class="product-image">
+
+    <!-- Product Info -->
+    <div class="product-info">
+      <h1>{{ product.name }}</h1>
+      <p class="product-description">{{ product.description }}</p>
+      <p class="product-price">Price: {{ product.price }}</p>
+    </div>
+
+  </div>
+
+  <!-- Back to Collection Button -->
+  <a href="{{ url_for('main.collection') }}" class="back-link">← Back to Collection</a>
+
+<script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
+
+</body>
+
+</html>
+
+
+

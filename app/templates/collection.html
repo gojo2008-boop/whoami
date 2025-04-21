@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore the Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/collection.css') }}" />
+</head>
+<body>
+
+  <!-- LSD Visuals -->
+  <canvas id="visuals"></canvas>
+
+  <!-- Main Content -->
+  <div id="content" class="fade-in">
+    <h1 class="fade-in">Explore Our Collection</h1>
+    <p class="fade-in">
+      Discover the pieces that embody change and transformation. Our collection invites you to think deeper and love harder.
+    </p>
+
+    <a href="{{ url_for('main.collection') }}" class="fade-in">View Full Collection</a>
+
+    <!-- Collection Grid -->
+    <div class="collection-container">
+      <h1>Our Pieces</h1>
+      <div class="grid">
+        {% for product in products %}
+        <div class="product-card">
+          <img src="{{ url_for('static', filename='images/' + product.image_filename) }}" alt="{{ product.name }}">
+          <h2>{{ product.name }}</h2>
+          <p>{{ product.description }}</p>
+          <a href="{{ url_for('main.product', product_id=product.id) }}" class="view-details">View Details</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <a href="{{ url_for('main.home') }}" class="fade-in">Back to Home</a>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
+</body>
+</html>
+
+
+
+
+

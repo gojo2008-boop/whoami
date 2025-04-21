@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WHOAMI</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+
+  <!-- LSD Visuals -->
+  <canvas id="visuals"></canvas>
+
+  <!-- Main Content -->
+  <div id="content" class="fade-in">
+    <div id="question-mark" class="fade-in">
+      <span>WHOAMI</span>
+      <div class="heart fade-in">❤️</div>
+    </div>
+    <p class="fade-in">"Hate, but love more"</p>
+
+    <!-- Links inside square containers -->
+    <div class="links-container">
+      <a href="{{ url_for('main.about') }}" class="link-item fade-in">About Us</a>
+      <a href="{{ url_for('main.explore') }}" class="link-item fade-in">Explore the Collection</a>
+      <a href="{{ url_for('main.contact') }}" class="link-item fade-in">Contact Form</a>
+
+      <!-- Only one working Register Link -->
+      <a href="{{ url_for('main.register') }}" class="link-item fade-in">Register for Drop</a>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore the Collection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+  <!-- LSD Visuals -->
+  <canvas id="visuals"></canvas>
+
+  <!-- Main Content -->
+  <div id="content" class="fade-in">
+    <h1 class="fade-in">Explore Our Collection</h1>
+    <p class="fade-in">Discover the pieces that embody change and transformation. Our collection invites you to think deeper and love harder.</p>
+
+    <!-- Link to collection page -->
+    <a href="{{ url_for('main.collection') }}" class="link-item fade-in">View Full Collection</a>
+
+    <a href="{{ url_for('main.home') }}" class="fade-in">Back to Home</a>
+  </div>
+
+  <!-- Link to the home.js file -->
+  <script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
+</body>
+</html>
+
+
+
+
